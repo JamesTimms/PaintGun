@@ -8,7 +8,6 @@ using System.Collections;
  */
 [RequireComponent (typeof(CharacterController))]
 public class PlayMovement : MonoBehaviour {
-	
 	public float movementSpeed = 7.0f;
 	public float mouseSensitivity = 1.5f;
 	public float jumpSpeed = 7.0f;
@@ -37,11 +36,11 @@ public class PlayMovement : MonoBehaviour {
 		 * Camera rotation based on mouse movement controls.
 		 */
 		
-		//Horizontal camera movement.
+		//Horizontal camera movement. -- x-axis
 		float rotYaw = Input.GetAxis("Mouse X") * mouseSensitivity;;
 		transform.Rotate(0, rotYaw, 0);
 		
-		//Limit the Vertical camera movement.
+		//Limit the Vertical camera movement. -- y-axis
 		verticalRot -= Input.GetAxis("Mouse Y") * mouseSensitivity;
 		verticalRot = Mathf.Clamp(verticalRot, -cameraRotRange, cameraRotRange);
 		Camera.main.transform.localRotation = Quaternion.Euler(verticalRot, 0, 0);
