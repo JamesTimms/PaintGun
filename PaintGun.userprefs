@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NGUI Extensions\ChangeTextOnLabel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ProjectileBehavior.cs">
     <Files>
-      <File FileName="Assets\NGUI Extensions\ChangeTextOnLabel.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/ProjectileBehavior.cs" Line="12" Column="3" />
+      <File FileName="Assets/Scripts/ProjectilePos.cs" Line="17" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
