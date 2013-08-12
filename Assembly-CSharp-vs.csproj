@@ -174,6 +174,8 @@
      <Compile Include="Assets\Scripts\ObjectBehaviours\Jump.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviours\PlayerEvtManager.cs" />
      <Compile Include="Assets\Scripts\PlayMovement.cs" />
+     <Compile Include="Assets\Scripts\ProjectileBehavior.cs" />
+     <Compile Include="Assets\Scripts\ProjectilePos.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />

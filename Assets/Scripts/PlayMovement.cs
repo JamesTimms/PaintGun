@@ -23,9 +23,6 @@ public class PlayMovement : MonoBehaviour {
 	/// to make the player jump higher.
 	/// </summary>
 	public event EventHandler OnJump;
-	//Public array mapping file name to function name.
-	
-	public Jump jump;
 	
 	/**
 	 * The camera rotation range in degrees. 
