@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 /**
  * This require component line of code will cause a 
@@ -13,6 +14,19 @@ public class PlayMovement : MonoBehaviour {
 	public float mouseSensitivity = 1.5f;
 	public float jumpSpeed = 7.0f;
 	
+	/// <summary>
+	/// Occurs when the player jumps.
+	/// Can be used in such a way that if the player
+	/// is standing on an object like a panel the
+	/// object can have a triggered method added to
+	/// this event. This would allow for an object
+	/// to make the player jump higher.
+	/// </summary>
+	public event EventHandler OnJump;
+	//Public array mapping file name to function name.
+	
+	public Jump jump;
+	
 	/**
 	 * The camera rotation range in degrees. 
 	 * The camera cannot move more than this
@@ -21,13 +35,25 @@ public class PlayMovement : MonoBehaviour {
 	public float cameraRotRange = 60.0f;
 	float verticalRot = 0;
 	
-	float verticalVelocity = 0;
-	CharacterController cc;
+	[HideInInspector]
+	public float verticalVelocity = 0;
+	[HideInInspector]
+	public CharacterController cc;
 	
 	// Use this for initialization
 	void Start () {
 		Screen.lockCursor = true;
 		cc = GetComponent<CharacterController>();
+		
+		toggleNormalJump(true);
+	}
+	
+	public void toggleNormalJump(bool on)
+	{
+		if(on)
+			OnJump += NormalJump;
+		else
+			OnJump -= NormalJump;
 	}
 	
 	// Update is called once per frame
@@ -54,16 +80,42 @@ public class PlayMovement : MonoBehaviour {
 		//Left Right movement.
 		float sideSpeed = movementSpeed * Input.GetAxis("Horizontal");
 		
+//		//Player Jump
+//		if(cc.isGrounded){
+//			//GetButtonDown causes a lack of bunny hopping. :(
+//			if(Input.GetButton("Jump")){
+//				verticalVelocity += jump.ActivateJump();
+//			}
+//		}else{
+//			verticalVelocity += Physics.gravity.y * Time.deltaTime;
+//		}
+		
+		//Subscribe player to all and any Jump behaviours.
+//		jump.ActivateJump(this.gameObject.transform);
 		if(cc.isGrounded){
-			//GetButtonDown causes a lack of bunny hopping. :(
-			if(Input.GetButton("Jump")){
-				verticalVelocity = jumpSpeed;
-			}
+			if(Input.GetButton("Jump"))
+				if(OnJump != null)
+					OnJump(this, EventArgs.Empty);
 		}else{
 			verticalVelocity += Physics.gravity.y * Time.deltaTime;
-		}
+		}	
+		//Subscribe to player shoot.
+		//shoot.FireWeapon();
+		//shoot.createParticle();
+		//shoot.processObjCol();
+		
 		Vector3 speed = new Vector3(sideSpeed, verticalVelocity, forwardSpeed);
 		speed = transform.rotation * speed;	
 		cc.Move( speed * Time.deltaTime);
+	}
+	
+
+	void NormalJump(object sender, EventArgs e)
+	{
+//		PlayMovement player = (PlayMovement) sender;
+		
+		//GetButtonDown causes a lack of bunny hopping. :(
+		verticalVelocity = jumpSpeed;
+
 	}
 }
