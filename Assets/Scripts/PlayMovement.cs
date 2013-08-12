@@ -56,8 +56,8 @@ public class PlayMovement : MonoBehaviour {
 			OnJump -= NormalJump;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	//Player Physics goes here.
+	void FixedUpdate () {
 		
 		/** Main Camera
 		 * Camera rotation based on mouse movement controls.
@@ -91,7 +91,6 @@ public class PlayMovement : MonoBehaviour {
 //		}
 		
 		//Subscribe player to all and any Jump behaviours.
-//		jump.ActivateJump(this.gameObject.transform);
 		if(cc.isGrounded){
 			if(Input.GetButton("Jump"))
 				if(OnJump != null)
