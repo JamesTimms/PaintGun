@@ -1,9 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ProjectileBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayMovement.cs">
     <Files>
-      <File FileName="Assets/Scripts/ProjectileBehavior.cs" Line="12" Column="3" />
-      <File FileName="Assets/Scripts/ProjectilePos.cs" Line="17" Column="48" />
+      <File FileName="Assets\Scripts\ProjectileBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelGeneration\LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ObjectBehaviours\InteractionElevator.cs" Line="14" Column="26" />
+      <File FileName="Assets\Scripts\ObjectBehaviours\Moveable.cs" Line="25" Column="10" />
+      <File FileName="Assets\Scripts\ObjectBehaviours\InteractionJump.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\ProjectilePos.cs" Line="33" Column="46" />
+      <File FileName="Assets\Scripts\ObjectBehaviours\InteractionGunShot.cs" Line="19" Column="28" />
+      <File FileName="Assets\Scripts\ObjectBehaviours\InteractionVisibility.cs" Line="11" Column="14" />
+      <File FileName="Assets\Scripts\PlayMovement.cs" Line="120" Column="15" />
+      <File FileName="Assets\NGUI\Scripts\Internal\NGUITools.cs" Line="379" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
