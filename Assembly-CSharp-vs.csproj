@@ -175,9 +175,6 @@
      <Compile Include="Assets\Scripts\ObjectBehaviours\InteractionJump.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviours\InteractionVisibility.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviours\Moveable.cs" />
-     <Compile Include="Assets\Scripts\ObjectBehaviours\InteractionJump.cs" />
-     <Compile Include="Assets\Scripts\ObjectBehaviours\Jump.cs" />
-     <Compile Include="Assets\Scripts\ObjectBehaviours\PlayerEvtManager.cs" />
      <Compile Include="Assets\Scripts\PlayMovement.cs" />
      <Compile Include="Assets\Scripts\ProjectileBehavior.cs" />
      <Compile Include="Assets\Scripts\ProjectilePos.cs" />
