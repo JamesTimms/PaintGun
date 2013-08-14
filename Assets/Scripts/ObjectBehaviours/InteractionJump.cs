@@ -14,10 +14,16 @@ public class InteractionJump : MonoBehaviour {
 	/// </param>
 	void OnTriggerEnter(Collider col)
 	{
+<<<<<<< HEAD
+		if(col.tag == "Player")
+		{
+			player = col.gameObject.GetComponent<PlayMovement>();
+=======
 		if(col.gameObject.tag == "Player")
 		{
 			player = col.gameObject.GetComponent<PlayMovement>();
 			player.toggleNormalJump(false);
+>>>>>>> 32e029c6200f7e009fe619204b819a467ea25b10
 			player.OnJump += SuperJump;
 		}
 	}
@@ -30,11 +36,18 @@ public class InteractionJump : MonoBehaviour {
 	/// </param>
 	void OnTriggerExit(Collider col)
 	{
+<<<<<<< HEAD
+		if(col.tag == "Player")
+		{
+			player = col.gameObject.GetComponent<PlayMovement>();
+			player.OnJump -= SuperJump;
+=======
 		if(col.gameObject.tag == "Player")
 		{
 			player = col.gameObject.GetComponent<PlayMovement>();
 			player.OnJump -= SuperJump;
 			player.toggleNormalJump(true);
+>>>>>>> 32e029c6200f7e009fe619204b819a467ea25b10
 		}
 	}
 	
