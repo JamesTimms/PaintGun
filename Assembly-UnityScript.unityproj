@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{5E9EB8B3-62C3-BDC9-918B-8A3D073D122C}</ProjectGuid>
+	<ProjectGuid>{416FB883-FE66-51D2-F09F-DE1CA9BA5770}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_5;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_0;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -37,48 +37,14 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Editor\InvDatabaseInspector.cs" />
-     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Editor\InvFindItem.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\BMFontReader.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\ComponentSelector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIEditorTools.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIJson.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIMenu.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\NGUISelectionTools.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\NGUISettings.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\NGUITransformInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\SpriteSelector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIAtlasInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIAtlasMaker.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UICameraTool.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UICreateNewUIWizard.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UICreateWidgetWizard.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIDrawCallInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIFilledSpriteInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIFontInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIFontMaker.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIImageButtonAltInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIImageButtonInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UILabelInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIPanelInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIPanelTool.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIPopupListInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIScrollBarInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UISlicedSpriteInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UISliderInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UISpriteAnimationInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UISpriteInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UITextureInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UITexturePacker.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UITiledSpriteInspector.cs" />
-     <Compile Include="Assets\NGUI\Scripts\Editor\UIWidgetInspector.cs" />
+     <Compile Include="Assets\Scripts\PaintTubeTest.js" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
@@ -112,17 +78,12 @@
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (SoftClip).shader" />
      <None Include="Assets\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
- <Reference Include="UnityEditor.Graphs">
- <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{7F5659EA-04E4-B0BB-E9E5-FFEACF3DB6AB}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
       <Project>{A2561F35-6319-8D66-310D-E8F7BD4AD263}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{8B5EAA69-B1E1-2A03-EC91-76266DAA5691}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
