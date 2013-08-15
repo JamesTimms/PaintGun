@@ -10,9 +10,9 @@ using System;
 [RequireComponent (typeof(CharacterController))]
 public class PlayMovement : MonoBehaviour {
 	
-	public float movementSpeed = 7.0f;
-	public float mouseSensitivity = 1.5f;
-	public float jumpSpeed = 7.0f;
+	public const float movementSpeed = 7.0f;
+	public const float mouseSensitivity = 1.5f;
+	public const float jumpSpeed = 7.0f;
 	public GameObject defaultGunPrefab;
 	
 	/// <summary>
@@ -26,6 +26,10 @@ public class PlayMovement : MonoBehaviour {
 	public event EventHandler OnJump;
 	
 	public event EventHandler OnShootGun;
+	
+	public event EventHandler OnTouchObj;
+	
+	public event EventHandler OnMove;
 	
 	/**
 	 * The camera rotation range in degrees. 
@@ -68,13 +72,10 @@ public class PlayMovement : MonoBehaviour {
 		verticalRot = Mathf.Clamp(verticalRot, -cameraRotRange, cameraRotRange);
 		Camera.main.transform.localRotation = Quaternion.Euler(verticalRot, 0, 0);
 		
-		/** Player Movement
-		 * Set speed of player based on movement controls used.
-		 */
-		//forward backward movement.
-		float forwardSpeed = movementSpeed * Input.GetAxis("Vertical");
-		//Left Right movement.
-		float sideSpeed = movementSpeed * Input.GetAxis("Horizontal");
+		if(OnMove != null)
+			OnMove(this, EventArgs.Empty);
+		else
+			NormalMovement();
 		
 //		//Player Jump
 //		if(cc.isGrounded){
@@ -106,15 +107,12 @@ public class PlayMovement : MonoBehaviour {
 //			Debug.Log("Player has no gun/weapon. Creating default.");
 		}
 //			playerGun.PlayerUpdateGun();
-		
-		//Subscribe to player shoot.
-		//shoot.FireWeapon();
-		//shoot.createParticle();
-		//shoot.processObjCol();
-		
-		Vector3 speed = new Vector3(sideSpeed, verticalVelocity, forwardSpeed);
-		speed = transform.rotation * speed;	
-		cc.Move( speed * Time.deltaTime);
+//		
+//		if(Input.GetKeyDown(KeyCode.E) ||
+//			Input.GetMouseButtonDown(2))
+			if(OnTouchObj != null)
+				OnTouchObj(this, EventArgs.Empty);
+
 	}
 	
 	void createDefaultGun()
@@ -133,5 +131,20 @@ public class PlayMovement : MonoBehaviour {
 		//GetButtonDown causes a lack of bunny hopping. :(
 		verticalVelocity = jumpSpeed;
 
+	}
+	
+	void NormalMovement()
+	{
+		/** Player Movement
+		 * Set speed of player based on movement controls used.
+		 */
+		//forward backward movement.
+		float forwardSpeed = movementSpeed * Input.GetAxis("Vertical");
+		//Left Right movement.
+		float sideSpeed = movementSpeed * Input.GetAxis("Horizontal");	
+		
+		Vector3 speed = new Vector3(sideSpeed, verticalVelocity, forwardSpeed);
+		speed = transform.rotation * speed;	
+		cc.Move( speed * Time.deltaTime);
 	}
 }
