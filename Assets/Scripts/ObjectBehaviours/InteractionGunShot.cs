@@ -5,18 +5,21 @@ using System;
 public class InteractionGunShot : MonoBehaviour {
 
 	public event EventHandler OnHit;
-	
-	void OnGunHit()
+	void OnGunHit( )
 	{
-		if(OnHit != null)
-			OnHit(this, EventArgs.Empty);
-		else
-			Debug.Log("No events for OnGunHit: " + this.name);
+		if( OnHit != null ){
+			OnHit( this, EventArgs.Empty );
+		}else{
+			Debug.Log( "No events for OnGunHit: " + this.name );
+		}
 	}
-	
-	void OnGunHitRight()
+	void OnGunHitRight( )
 	{
-		Debug.Log("Right trigger!");	
+		if( OnHit !=null ){
+			OnHit( this, EventArgs.Empty);	
+		}else{
+			Debug.Log( "Right trigger!" );
+		}
 	}
 	
 }
