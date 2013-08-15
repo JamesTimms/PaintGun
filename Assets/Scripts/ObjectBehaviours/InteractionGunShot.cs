@@ -5,6 +5,7 @@ using System;
 public class InteractionGunShot : MonoBehaviour {
 
 	public event EventHandler OnHit;
+	public event EventHandler OnRightHit;
 	void OnGunHit( )
 	{
 		if( OnHit != null ){
@@ -15,8 +16,8 @@ public class InteractionGunShot : MonoBehaviour {
 	}
 	void OnGunHitRight( )
 	{
-		if( OnHit !=null ){
-			OnHit( this, EventArgs.Empty);	
+		if( OnRightHit != null ){
+			OnRightHit( this, EventArgs.Empty);	
 		}else{
 			Debug.Log( "Right trigger!" );
 		}

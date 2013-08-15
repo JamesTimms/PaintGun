@@ -3,7 +3,9 @@ using System.Collections;
 using System;
 
 public class InteractionJump : MonoBehaviour {
-
+	
+	public float jumpPower;
+	
 	PlayMovement player;
 	
 	/// <summary>
@@ -57,7 +59,7 @@ public class InteractionJump : MonoBehaviour {
 				Debug.LogWarning("Super Jump isn't registering player on ColEnter properly.");
 			}
 			//SUPER JUMPU~~~!!
-			player.verticalVelocity = 2 * PlayMovement.jumpSpeed;
+			player.verticalVelocity = jumpPower * PlayMovement.jumpSpeed;
 		}
 	}
 }
