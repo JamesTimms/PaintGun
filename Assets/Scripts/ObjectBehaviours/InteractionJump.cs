@@ -57,7 +57,7 @@ public class InteractionJump : MonoBehaviour {
 				Debug.LogWarning("Super Jump isn't registering player on ColEnter properly.");
 			}
 			//SUPER JUMPU~~~!!
-			player.verticalVelocity = 2 * player.jumpSpeed;
+			player.verticalVelocity = 2 * PlayMovement.jumpSpeed;
 		}
 	}
 }

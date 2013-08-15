@@ -172,9 +172,11 @@
      <Compile Include="Assets\Scripts\Gun Behaviors\InteractionChangeSize.cs" />
      <Compile Include="Assets\Scripts\Gun Behaviors\InteractionVisibility.cs" />
      <Compile Include="Assets\Scripts\LevelGeneration\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\ObjectBehaviours\InteractionChangeBehaviour.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviours\InteractionElevator.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviours\InteractionGunShot.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviours\InteractionJump.cs" />
+     <Compile Include="Assets\Scripts\ObjectBehaviours\InteractionMovement.cs" />
      <Compile Include="Assets\Scripts\ObjectBehaviours\Moveable.cs" />
      <Compile Include="Assets\Scripts\PlayMovement.cs" />
      <Compile Include="Assets\Scripts\ProjectileBehavior.cs" />
