@@ -53,7 +53,7 @@ public class PlayMovement : MonoBehaviour {
 		cc = GetComponent<CharacterController>();
 		Physics.IgnoreLayerCollision(8, 11);
 		if(playerCam = this.GetComponentInChildren<Camera>())
-			Debug.LogError("Cannot find the player's camera.");
+			Debug.Log("Cannot find the player's camera.");
 	}
 	
 	//Player Physics goes here.

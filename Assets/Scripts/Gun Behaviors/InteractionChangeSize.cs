@@ -23,11 +23,6 @@ public class InteractionChangeSize : MonoBehaviour {
 	{
 		growShrinkSwitch = true;
 		activate = true;
-//		float animateX = Mathf.Lerp (transform.localScale.x, (xSize/10), 5.0f );
-//		float animateY = Mathf.Lerp (transform.localScale.y, (ySize/10), 5.0f );
-//		float animateZ = Mathf.Lerp (transform.localScale.z, (zSize/10), 5.0f );
-//		Vector3 newVector3 = new Vector3(xSize/10, ySize/10, zSize/10);
-//		transform.localScale = Vector3.Lerp(transform.localScale, newVector3, 5.0f);
 	
 	}
 	
@@ -35,9 +30,6 @@ public class InteractionChangeSize : MonoBehaviour {
 	{	
 		growShrinkSwitch = false;
 		activate = true;
-//		Vector3 newVector3 = new Vector3(xSize/10, ySize/10, zSize/10);
-//		transform.localScale = Vector3.Lerp(transform.localScale, -newVector3, 5.0f);
-//		InvokeRepeating("MyPewPewMethod", 1.0f, 0.5f);
 	}
 	void Update( ){
 		
@@ -65,6 +57,7 @@ public class InteractionChangeSize : MonoBehaviour {
 			}
 		}
 	}
+}
 //	
 //	void MyPewPewMethod()
 //	{
@@ -72,5 +65,4 @@ public class InteractionChangeSize : MonoBehaviour {
 //		
 //		CancelInvoke("MyPewPewMethod");
 //	}
-}
 

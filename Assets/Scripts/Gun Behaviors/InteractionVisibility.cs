@@ -4,21 +4,18 @@ using System;
 
 public class InteractionVisibility : MonoBehaviour {
 	
-	//TODO Make real time.
+	//NOT USED IN GAME
 	public float timeTillReset;
 	public bool startInvisible;
 	
 	InteractionGunShot gunShotManager;
 	MeshRenderer myRenderer;
-	
-	// Use this for initialization
 	void Start () {
 		gunShotManager = gameObject.AddComponent<InteractionGunShot>();
 		myRenderer = gameObject.GetComponent<MeshRenderer>();
 		gunShotManager.OnHit += toggleMeshRenderer;
 		myRenderer.enabled = !startInvisible;
 		Physics.IgnoreLayerCollision(8, 10, startInvisible);
-//		Physics.IgnoreLayerCollision(8, 9, true);
 	}
 	
 	void toggleMeshRenderer(object sender, EventArgs e)
